@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>5 Second Rule — Final Layout</title>
+    <title>5 Second Rule — Centered Card</title>
     <style>
         * {
             user-select: none;
@@ -47,16 +47,15 @@
         .card-row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
             width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 20px;
         }
-        /* Кнопка RESTART сдвинута левее */
         .restart-btn {
             background: #4CAF50;
             color: white;
-            position: relative;
-            left: -15px;  /* смещение влево */
         }
         .flip-card {
             width: 420px;
@@ -64,7 +63,6 @@
             perspective: 1200px;
             cursor: pointer;
             flex-shrink: 0;
-            margin-left: 140px;  /* карточка сдвинута правее */
         }
         .next-btn {
             background: #FFB347;
@@ -150,10 +148,6 @@
             .flip-card {
                 width: 320px;
                 height: 260px;
-                margin-left: 60px;
-            }
-            .restart-btn {
-                left: -8px;
             }
             .front, .back { font-size: 32px; padding: 20px; }
             .front::before { font-size: 2.5rem; }
@@ -170,10 +164,6 @@
             .flip-card {
                 width: 260px;
                 height: 220px;
-                margin-left: 20px;
-            }
-            .restart-btn {
-                left: -5px;
             }
             .front, .back { font-size: 24px; padding: 16px; }
             .front::before { font-size: 2rem; }
